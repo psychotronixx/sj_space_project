@@ -1,0 +1,123 @@
+footer{
+    width: 100%;
+    padding-top: 30px;
+    margin-top: 60px;
+
+    font-family: 'Proxima nova condensed';
+    color: white;
+    background-color: black;
+}
+
+.footer_middle_text{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.footer_middle_text:last-child{
+    margin-left: auto;
+}
+.footer_text{
+    width: 150px;
+}
+.footer_text h2{
+    margin-bottom: 20px;
+}
+
+.footer_icons{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.footer_icons a{
+    font-size: 20px;
+    padding: 0 18px 0 0;
+    color: white;
+    border-radius: 4px;
+}
+.footer_icons a.instagram:hover{
+    color: orange;
+}
+.footer_icons a.facebook:hover{
+    color: rgb(43, 117, 214);
+}
+.footer_icons a.ukf:hover{
+    color: skyblue;
+}
+.footer_text ul{
+    list-style-type: none;
+}
+.footer_text:first-child ul{
+    list-style-type: circle;
+    margin-left: 15px;
+}
+
+.footer_text ul li{
+    margin-bottom: 10px;
+}
+.footer_text ul li a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+
+    font-size: 16px;
+    color: white;
+
+    &:hover{
+        text-decoration: underline;
+        color: skyblue;
+    }
+}
+.footer_text ul li a i{
+    margin-right: 5px;
+}
+.copyright{
+    width: 100%;
+    padding: 40px 0 20px 0;
+    display: flex;
+    justify-content: center;
+
+    color: white;
+}
+.footer_who h2{
+    margin-left: 10px;
+}
+.footer_who ul{
+    list-style-type: circle;
+    margin-left: 15px;
+}
+
+
+@media (max-width:800px){
+    .footer_middle_text{
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer_text{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .footer_text iframe{
+        width: 50vw;
+    }
+    .footer_text ul{
+        font-size: 16px;
+        margin-left: 20px;
+    }
+    .footer_text h2{
+        display: flex;
+        align-items: center;
+        font-size: 25px;
+        margin-right: 20px;
+        padding-bottom: 8px;
+    }
+    .footer_icons a{
+        font-size: 22px;
+    }
+}
+
+@media (min-width:1000px){
+    .footer_middle_text{
+        width: 60%;
+    }
+}

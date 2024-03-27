@@ -1,0 +1,80 @@
+main{
+    padding-top: 100px;
+    font-family: 'Proxima Nova Condensed', sans-serif;
+}
+
+.center{
+    width: 50%;
+    margin: 0 auto;
+}
+
+/* Registration Form */
+.registration_formular{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Proxima Nova Condensed', sans-serif;
+    font-size: 16px;
+}
+.registration_formular input[type=text], input[type=email], input[type=password], select{
+    width: 400px;
+    margin: 5px 0px 10px 0;
+    padding: 12px 10px;
+    
+    box-sizing: border-box;
+    border: 2px solid white;
+    color: black;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: inset 0 0 5px rgb(209, 209, 209);
+}
+.registration_formular select{
+    border: 2px solid white;
+    background-color: rgb(236, 236, 236);
+}
+.registration_formular input[type=submit]{
+    display: flex;
+    width: 100px;
+    padding: 5px;
+    text-align: center;
+    margin: 15px auto;
+
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgb(209, 209, 209);
+
+    &:hover{
+        background-color: rgb(241, 241, 241);
+        border: 1px solid rgb(241, 241, 241);
+    }
+}
+
+.text_container h2{
+    font-size: 32px;
+    margin: 30px 0px 5px 0;
+}
+.text_container p{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.text_container hr{
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
+
+/* For smaller Screens */
+@media (max-width: 800px){
+    .registration_formular input[type=text], input[type=email], input[type=password], select{
+        width: 50vw;
+    }
+    .registration_formular input[type=submit]{
+        width: 15vw;
+    }
+}
+
+@media (max-width:1000px){
+    .center{
+        width: 80%;
+    }
+}
