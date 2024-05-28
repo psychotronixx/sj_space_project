@@ -1,0 +1,100 @@
+body{
+    background-color: #111;
+    overflow-x: hidden;
+}
+main{
+    color: white;
+    font-family: 'Proxima Nova Condensed', sans-serif;
+}
+.center{
+    width: 50%;
+    margin: 0 auto;
+
+    /* font-family: 'Proxima Nova Extra Condensed', sans-serif; */
+    /* font-family: 'Futura PT', sans-serif;      */
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+    /* font-family: 'Roboto'; */
+    /* font-family: 'Garamond', sans-serif; */
+}
+
+/* Text over image */
+.text_over_image{
+    width: 100svw;
+    height: 100svh;
+}
+.text_over_image h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 15vw;
+    text-shadow: 13px 10px 0px black;
+    z-index: 2;
+    animation: slidein 2.5s ease-in-out;
+}
+.text_over_image img{
+    filter: blur(0.8px);
+    filter: contrast(110%);
+    z-index: 1;
+    width: 100%;
+    height: calc(100% - 50px);
+    pointer-events: none;
+    object-fit: cover;
+}
+@keyframes slidein{
+    0%{
+        opacity: 0;
+        font-size: 100vh;
+    }
+    100%{
+        opacity: 100%;
+        font-size: 15vw;
+    }
+}
+
+/* Text */
+.text_container h2{
+    font-size: 50px;
+    margin: 60px 0px 15px 0;
+}
+.text_container p{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.text_container hr{
+    margin-bottom: 80px;
+}
+
+/* table */
+.index_table{
+    box-shadow: 5px 5px 10px  #333;
+}
+.index_table, th,td,tr{
+    width: 50vw;
+    height: 40px;
+    padding: 8px;
+    margin: 0 auto;
+    border:  1px solid white;
+    border-collapse: collapse;
+    background-color: #222;
+}
+.index_table td:hover{
+    background-color: #333;
+}
+
+.index_table td{
+    text-align: center;
+    background-color: #111;
+}
+
+@media (max-width:800px){
+    .index_table{
+        width: 80vw;
+    }
+}
+
+@media (max-width:1000px){
+    .center{
+        width: 80%;
+    }
+}

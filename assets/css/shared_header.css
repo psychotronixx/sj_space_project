@@ -1,0 +1,236 @@
+/* FONTS */
+/* PROXIMA */
+@import url(https://fonts.cdnfonts.com/css/proxima-nova-condensed);
+/* FUTURA */
+@import url(https://fonts.cdnfonts.com/css/futura-pt);
+/* GARAMOND */
+@import url(https://fonts.cdnfonts.com/css/garamond);
+/* ROBOTO */
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    padding: 5px;
+    box-sizing: border-box;
+    z-index: 100;
+    background-color: black;
+}
+main{
+    padding-top: 50px;
+}
+nav{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+
+    color: white;
+    font-family: 'Proxima Nova Condensed';
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* Header Logo */
+.header_logo{
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    color: white;
+    text-decoration: none;
+}
+.header_logo img{
+    height: 100%;
+}
+.header_logo span{
+    margin-left: 10px;
+    font-size: 25px;
+}
+
+/* Header Navigation Buttons */
+.header_btn{
+    height: 100%;
+    margin-left: 10%;
+    display: flex;
+    align-items: center;
+}
+.header_btn a{
+    height: 100%;
+    margin-left: 10px;
+    padding: 0 10px 0 10px;
+    display: flex;
+    align-items: center;
+
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+.header_btn a:hover{
+    background-color: #333;
+}
+
+/* Language, Dark mode buttons */
+.header_ld_mode{
+    margin-left: auto;
+    display: flex;
+}
+.login{
+    margin: 0px 10px;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+}
+.login:hover{
+    border-radius: 4px;
+    z-index: 2;
+    background-color: #333;
+}
+.header_ld_mode i{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 12px;
+}
+.header_ld_mode i:hover{
+    border-radius: 4px;
+    z-index: 2;
+    background-color: #333;
+}
+.header_ld_mode i:hover + ul,
+.header_ld_mode ul:hover{
+    display: block;
+}
+.header_ld_mode ul{
+    display: none;
+    position: absolute;
+    padding-top: 44px;
+    transform: translate(95px, 0px);
+
+    list-style-type: none;
+    background-color: transparent;
+
+    animation: growDownlang 300ms ease-in-out;
+    transform-origin: top center;
+}
+.header_ld_mode ul li{
+    display: flex;
+    background-color: black;
+}
+.header_ld_mode ul li a{
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+
+    &:hover{
+        background-color: #333;
+    }
+}
+@keyframes growDownlang {
+    0% {
+        transform: translateX(95px) scale(0);
+    }
+    80% {
+        transform: translateX(95px) scale(1.1);
+    }
+    100% {
+        transform: translateX(95px) scale(1);
+    }
+}
+
+/* Header Hamburger MENU */
+.header_hamburger{
+    display: none;
+    margin: 0 30px 0 10px;
+    font-size: 25px;
+    
+    font-weight: 800;
+}
+.header_hamburger i{
+    padding: 10px;
+}
+.header_hamburger i:hover{
+    z-index: 2;
+    border-radius: 4px;
+    background-color: #333;
+}
+.header_hamburger i:hover + ul,
+.header_hamburger ul:hover{
+    display: block;
+}
+.header_hamburger ul{
+    display: none;
+    position: absolute;
+    padding-top: 52px;
+    transform: translate(-35px, 0px);
+
+    list-style-type: none;
+
+    animation: growDownmini 300ms ease-in-out;
+    transform-origin: top center;
+}
+.header_hamburger ul li{
+    display: flex;
+    background-color: black;
+}
+.header_hamburger ul li a{
+    padding: 10px 20px;
+    width: 100%;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+
+    &:hover{
+        background-color: #333;
+    }
+}
+@keyframes growDownmini {
+    0% {
+        transform: translateX(-35px) scale(0);
+    }
+    80% {
+        transform: translateX(-35px) scale(1.1);
+    }
+    100% {
+        transform: translateX(-35px) scale(1);
+    }
+}
+
+/* For smaller screens */
+@media (max-width:800px){
+    nav{
+        width: 100%;
+    }
+    /* Header Hamburger MENU */
+    .header_btn{
+        display: none;
+    }
+    .header_hamburger{
+        display: flex;
+    }
+    .header_hamburger ul{
+        transform: translate(-15px, 0px);
+        animation: growDownmini 300ms ease-in-out;
+        transform-origin: top center;
+    }
+    @keyframes growDownmini {
+        0% {
+            transform: translateX(-15px) translateX(-100%);
+        }
+        100% {
+            transform: translateX(-15px) translateX(0px);
+        }
+    }
+    /* Language, Dark mode buttons */
+    .header_ld_mode i{
+        margin-right: 30px;
+    }
+}

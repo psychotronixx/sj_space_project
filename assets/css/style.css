@@ -1,0 +1,89 @@
+*{
+  margin:0px;
+  box-sizing: border-box;
+}
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/*ŠTÝLY PRE FONTY*/
+h1{
+  font-size:60px;
+}
+h2{
+  font-size:40px;
+}
+h3{
+  font-size:35px;
+}
+h4,h5,h6{
+  font-size:20px;
+}
+p{
+  font-size:16px;
+}
+
+
+/*ŠTÝLY PRE LAYOUT*/
+.container{
+  padding:3% 10% 3% 10%;
+}
+.row{
+  display:flex;
+  flex-direction: row;
+  padding: 25px 0px;
+  gap:20px;
+}
+/*šírka stĺpcov .col, ktoré sa nachádzajú pod class .row*/
+.row .col-25{
+  width:25%;
+}
+.row .col-33{
+  width:33%;
+}
+.row .col-50{
+  width:50%;
+}
+.row .col-100{
+  width:100%;
+}
+/*FARBY POZADIA*/
+.bg-dark{
+  background-color:rgb(25, 25, 25);
+}
+/*FARBY TEXTOV*/
+.text-dark{
+  color:rgb(25, 25, 25);
+}
+.text-white{
+  color:white;
+}
+
+/*ZAROVNANIE TEXTOV*/
+.text-center{
+  text-align:center;
+}
+.text-left{
+  text-align:left;
+}
+.text-right{
+  text-align:right;
+}
+
+/*FOOTER*/
+
+footer p a, li a{
+  text-decoration: none;
+  color:white;
+}
+footer li{
+  list-style:none;
+}
+.admin-table th{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: left;
+  background-color: black;
+  color: white;
+}
+.admin-table tr:nth-child(even){background-color: #f2f2f2;}
+.admin-table tr:hover {background-color: #ddd;}
